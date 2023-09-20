@@ -2,10 +2,8 @@
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
         var buttonNum = this.innerHTML;
-
         checkSound(buttonNum);
         buttonPress(buttonNum);
-        
     } );
 }
 
@@ -16,7 +14,6 @@ document.addEventListener("keydown", function(event) {
 })
 
 //Play the sound
-
 function checkSound (key) {
     switch (key) {
         case "w":
@@ -51,18 +48,15 @@ function checkSound (key) {
         default: console.log(buttonNum);
             break;
       }
-
 }
 
 //Animate button pressed
-
 function buttonPress(currentKey) {
     var buttonPressed = document.querySelector("." + currentKey);
     buttonPressed.classList.add("pressed");
     setTimeout(function() {
         buttonPressed.classList.remove("pressed");
     }, 100);
-
 }
 
 
