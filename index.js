@@ -58,6 +58,3 @@ function buttonPress(currentKey) {
         buttonPressed.classList.remove("pressed");
     }, 100);
 }
-
-
-
